@@ -1,0 +1,24 @@
+{
+  "name": "SendNightlySummary",
+  "type": "dag",
+  "description": "Sends Ron the message \"Summarize today\".",
+  "iconName": "MessageSquare",
+  "inputSchema": {
+    "type": "object",
+    "properties": {}
+  },
+  "exposedToUI": false,
+  "output": "AskRon",
+  "toolEffect": "read-only",
+  "actionNodes": [
+    {
+      "name": "AskRon",
+      "actionTypeId": "ai_tools/SendAgentMessage",
+      "input": {
+        "agentBlockId": "PurchasingAssistant",
+        "prompt": "Summarize today",
+        "promptSummary": "Ask Ron for the daily summary"
+      }
+    }
+  ]
+}

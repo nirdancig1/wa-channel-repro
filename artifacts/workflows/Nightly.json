@@ -1,0 +1,12 @@
+{
+  "name": "Nightly",
+  "description": "Every day at 02:00 (UTC), sends Ron the message \"Summarize today\".",
+  "iconName": "Moon",
+  "triggerTypeId": "686255085f46e24c41a1b536",
+  "triggerData": {
+    "cronExpression": "0 2 * * *",
+    "timezone": "UTC"
+  },
+  "actionTypeId": "SendNightlySummary",
+  "actionInstanceInputs": {}
+}
